@@ -1,5 +1,87 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Dimensions Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6ccb2; /* Light brown background */
+            color: #4d3319; /* Dark brown text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-box {
+            background-color: #a67c52; /* Medium brown background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center; /* Center the content inside the form */
+        }
+
+        h1 {
+            text-align: center;
+            color: #4d3319; /* Dark brown */
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 90%; /* Reduce the width to ensure it's centered nicely */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #4d3319;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input[type="submit"] {
+            width: 90%; /* Keep submit button centered too */
+            padding: 10px;
+            background-color: #4d3319;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3b2614;
+        }
+    </style>
+</head>
 <body>
-<h2>Home Page</h2>
+    <div class="container">
+        <div class="form-box">
+            <h1>Enter Rectangle</h1>
+            <form action="/area" method="POST">
+                <label for="height">Height:</label>
+                <input type="text" id="height" name="height" placeholder="Enter height" required>
+
+                <label for="width">Width:</label>
+                <input type="text" id="width" name="width" placeholder="Enter width" required>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
